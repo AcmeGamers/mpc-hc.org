@@ -72,13 +72,13 @@ redirect_from:
     </a>
 
     <h2>
-        <a href="/archive/" title="Browse the archive">Latest news</a>
+        <a href="/archive/" title="Browse the archive" class="left">Latest news</a>
     </h2>
 
     {% for post in site.posts limit:site.news_limit %}
     <div class="new">
         <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a class="left" href="{{ post.url }}">{{ post.title }}</a>
         </h3>
 
         <div class="post-meta">
