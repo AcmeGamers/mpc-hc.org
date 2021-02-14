@@ -96,12 +96,51 @@ body {
 .navbar-default .navbar-brand {
     font-size: 21px;
     font-weight: 700;
+    transition: .5s ease all;
 }
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
-    text-shadow: 0 0 20px #08c;
+    text-shadow: 0 0 2px #08c;
 }
+
+.btn-lg {
+  transition: .5s ease all;
+}
+
+.navbar-default .navbar-nav>li>a {
+  transition: .5s ease all;
+}
+
+/* Links */
+a.left {
+  position: relative;
+  color: #337ab7;
+  transition: .5s ease all;
+}
+
+a:hover {
+  color: #23527c
+}
+
+a.left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+
+a.left:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
 
 .thumbnail {
     border: none;
